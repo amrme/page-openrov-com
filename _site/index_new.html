@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OpenROV | Underwater Exploration Robots</title>
+        <meta property="og:title" content="OpenROV | Underwater Exploration Robots" />
+        <meta property="og:description" content="OpenROV is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists." />
+        <meta property="og:image" content="http://www.openrov.com/assets/openrov/images/ogimage.jpg" />
+        <meta property="og:url" content="http://www.openrov.com" />
+        <meta name="google-site-verification" content="6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvmNxYDI4" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta charset="utf-8">
+<link rel="image_src" type="image/jpeg" href="http://www.openrov.com/assets/openrov/images/ogimage.jpg" />
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/theme.min.css">
+<link rel="stylesheet" href="/assets/css/color-defaults.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-white.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-blue.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-gray.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-black.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-white-black.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-white-green.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/swatch-white-red.min.css" media="screen">
+<link rel="stylesheet" href="/assets/css/fonts.min.css" media="screen">
+<link rel="stylesheet" href="/assets/openrov/css/style.css" media="screen">
+
+<link rel="shortcut icon" href="/assets/openrov/images/favicon/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/assets/openrov/images/favicon/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="assets/openrov/images/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="assets/openrov/images/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="assets/openrov/images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="assets/openrov/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="assets/openrov/images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="assets/openrov/images/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="assets/openrov/images/favicon/apple-touch-icon-152x152.png" />
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key: "993f3545477f4aa8a4c0f28c3e08c11b",
+    picker: "bottom-right",
+    detectlang: true,
+    dynamic: true,
+    autocollect: true
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+        <style>
+
+          a.kickstarter:hover {
+            text-decoration: underline;
+          }
+          a.preorder:hover {
+            text-decoration: underline;
+          }          
+          .navbar {
+            background-color: rgba(12, 47, 62, 0.95) !important;
+          }
+        </style>
+        <script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
+    </head>
+
+    <body class="transparent-header">
+      <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M5WW27"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5WW27');</script>
+<!-- End Google Tag Manager -->
+<div id="masthead" class="navbar navbar-static-top swatch-black navbar-sticky" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/index.html" class="navbar-brand">
+        <img src="/assets/openrov/images/openrov.png"  alt="OpenROV | Underwater Exploration Robots">
+        <!--                         <img src="assets/openrov/images/openrov.png" class="white" alt="OpenROV | Underwater Exploration Robots">
+        <img src="assets/openrov/images/openrov-dark.png" class="black" alt="OpenROV | Underwater Exploration Robots">
+      -->                    </a>
+    </div>
+    <!--navigation-->
+    <nav class="collapse navbar-collapse main-navbar" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="http://store.openrov.com" target="_blank"><span>Store</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="http://blog.openrov.com" target="_blank"><span>Blog</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="http://community.openrov.com/forum" target="_blank"><span>Forum</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Product Info<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <!--<li><a href="https://www.kickstarter.com/projects/openrov/openrov-trident-an-underwater-drone-for-everyone">OpenROV Trident ROV</a></li>-->
+            
+            <li><a href="/products/1-trident.html">OpenROV Trident  ROV</a></li>
+            
+            <li><a href="/products/2-7.html">OpenROV 2.7 Mini Observation Class ROV</a></li>
+            
+            <li><a href="/products/2-8.html">OpenROV 2.8 Mini Observation Class ROV</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Support<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://openrov.dozuki.com/" target="_blank">Assembly Instructions</a></li>
+            <li><a href="http://openrov.dozuki.com/c/Operation" target="_blank">Operation Manuals</a></li>
+            <li class="divider"></li>
+            <li><a href="https://forum.openrov.com" target="_blank">Forums</a></li>
+            <li><a href="https://openrov.zendesk.com/hc/en-us/requests/new" target="_blank">Contact Support</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://community.openrov.com/forum" target="_blank">Forums</a></li>
+            <li><a href="https://gitter.im/OpenROV/discuss?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank">Chat on Gitter</a></li>
+            <li><a href="https://github.com/OpenROV/openrov-software#how-to-contribute" target="_blank">Development</a></li>
+            <li><a href="http://www.openexplorer.com" target="_blank"><span>OpenExplorer</span></a></li>
+            <li><a href="/usergroups"> User Groups </a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OpenSource<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="https://github.com/OpenROV/openrov-software" target="_blank">Software</a></li>
+            <li><a href="https://github.com/OpenROV/openrov-hardware" target="_blank">Hardware</a></li>
+            <li><a href="https://github.com/OpenROV/openrov-electronics" target="_blank">Electronics</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Media<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://bit.ly/openrov-presskit" target="_blank">Press Kit</a></li>
+            <li><a href="https://www.youtube.com/user/OpenROV" target="_blank">Youtube Videos</a></li>
+            <li><a href="https://forum.openrov.com/c/underwater-robots/gallery" target="_blank">Photo Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!--/ navigation-->
+  </div>
+</div>
+
+        <div id="content">
+            <article>
+                <script type="text/javascript">
+                var oxyThemeData = {
+                    navbarHeight: 90,
+                    navbarScrolled: 70,
+                    navbarScrolledPoint: 200,
+                    navbarScrolledSwatches:
+                    {
+                        up: 'swatch-black',
+                        down: 'swatch-black'
+                    },
+                    scrollFinishedMessage: 'No more items to load.',
+                    hoverMenu:
+                    {
+                        hoverActive: false,
+                        hoverDelay: 1,
+                        hoverFadeDelay: 200
+                    }
+                };
+                </script>
+                <section id="one" class="section swatch-black section-text-shadow section-fullheight">
+                    <div class="background-media" style="background-image: url('assets/images/trident/TridentComing.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50% 0px;" data-start="background-position:50% 0px"
+                    data-70-top-bottom="background-position:50% -80px">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
+                                    <div class="visible-xs" style="height:150px;"></div>
+                                    <div class="visible-sm" style="height:150px;"></div>
+                                    <div class="visible-md" style="height:220px;"></div>
+                                    <div class="visible-lg" style="height:220px;"></div>
+                                </div>
+                                <header class="text-center  element-no-top element-no-bottom not-condensed" data-os-animation="none" data-os-animation-delay="0s" data-70-top-bottom="opacity:0" data-start="opacity:1" data-center="opacity:1">
+                                  <div id="front-jumbotron" class="jumbotron  element-normal-top element-tall-bottom os-animation animated fadeIn">
+
+
+                                    <h1>
+                                      <img src="assets/images/trident/trident%20name%20white%20small.png" alt="Trident ROV">
+                                    </h1>
+
+                                      <h2 class="light no-bordered-header bordered-normal" style="font-size:40px; line-height: 52px;">
+                                      <a style="font-weight: bold; text-decoration: underline;" class="preorder" href="https://shop.trycelery.com/page/5637ca44df92ea03009633b3" data-celery="5637ca44df92ea03009633b3" data-celery-version="v2">Pre-order Now</a> and be one of the first to get a <a style="text-decoration: underline; font-weight: bold;" class="kickstarter" href="https://www.kickstarter.com/projects/openrov/openrov-trident-an-underwater-drone-for-everyone">Trident</a>.
+                                      </h2>
+                                    
+                                  </div>
+                                </header>
+                                <header class="text-center element-no-top element-short-bottom condensed skrollable skrollable-between" data-os-animation="none" data-os-animation-delay="0s" data-70-top-bottom="opacity:0" data-start="opacity:1" data-center="opacity:1" style="opacity: 1;">
+                                  <h2 class="light" style="font-size:30px">
+                                    <i>"The future of drones isn't in the skies. It's in the ocean."</i> - Gizmodo
+                                  
+                                  </h2>
+                                </header>
+
+                                  
+                                  <a href="#two" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                        <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="two" class="section swatch-black section-text-shadow section-fullheight">
+                    <div class="background-media" style="background-image: url('assets/images/2-8/two_guys_and_a_28_kit.JPG'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50% 0px;" data-start="background-position:50% 0px"
+                    data-70-top-bottom="background-position:50% -80px">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="divider-wrapper" style="visibility:hidden;background-color:#FFFFFF">
+                                    <div class="visible-xs" style="height:150px;"></div>
+                                    <div class="visible-sm" style="height:150px;"></div>
+                                    <div class="visible-md" style="height:220px;"></div>
+                                    <div class="visible-lg" style="height:220px;"></div>
+                                </div>
+
+                                <header class="text-center  element-no-top element-no-bottom not-condensed" data-os-animation="none" data-os-animation-delay="0s" data-70-top-bottom="opacity:0" data-start="opacity:1" data-center="opacity:1">
+                                  <div id="front-jumbotron" class="jumbotron  element-normal-top element-tall-bottom os-animation animated fadeIn">
+
+                                      <h2 class="light no-bordered-header bordered-normal" style="font-size:40px; line-height: 52px;">
+                                          <b>OpenROV 2.8 Kit</b>
+                                          </h2>
+                                      <h2 class="light no-bordered-header bordered-normal" style="font-size:40px; line-height: 52px;">
+                                          The original open-source underwater robot, upgraded.
+                                      </h2>
+                                      <h2>
+                                      <a style="font-weight: bold; text-decoration: underline;" href="http://store.openrov.com/collections/openrov">Buy Now</a>
+                                      </h2>
+                                    
+                                  </div>
+                                </header>     
+                                    
+                                  <a href="#three" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                        <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="three" class="section swatch-black section-inner-shadow">
+                  <div class="background-media skrollable skrollable-between" style="background-image: url(assets/openrov/images/sharks.jpg); background-attachment: fixed; background-size: cover; background-position: 50% -158.99785254116px; background-repeat: no-repeat;" data-start="background-position:50% 0px" data-70-top-bottom="background-position:50% -80px">
+                    <div class="background-overlay grid-overlay-20 " style="background-color: rgba(0,0,0,0.4);"></div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <header class="text-center  element-normal-top element-short-bottom not-condensed" data-os-animation="none" data-os-animation-delay="0s">
+                          <h1 class="bigger hairline bordered bordered-normal">
+                            Welcome to OpenROV!
+                          </h1>
+                        </header>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="panel panel-success element-no-top element-short-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp" data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">
+                              About OpenROV
+                            </h3>
+                          </div>
+                          <div class="panel-body swatch-white">
+                            <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
+                              <p>
+                                <strong>OpenROV</strong> is an open-source, low-cost underwater robot for exploration and education.<br> It's also a passionate community of professional and amateur ocean explorers and technologists.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="panel panel-warning element-no-top element-short-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp" data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">
+                              Get one
+                            </h3>
+                          </div>
+                          <div class="panel-body swatch-white">
+                            <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
+                              <p>
+                                <ul>
+                                  <li>Go to our <a href="http://store.openrov.com" target="_blank">online shop</a> and get yours</li>
+                                  <li>Get our <a href="http://openrov.dozuki.com/c/Building_from_a_kit" target="_blank">build instructions</a></li>
+                                </ul>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="panel panel-success element-no-top element-short-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp" data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">
+                              Get Involved
+                            </h3>
+                          </div>
+                          <div class="panel-body swatch-white">
+                            <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
+                              <p>
+                                <ul>
+                                  <li>Go to our <a href="https://forum.openrov.com" target="_blank">forums</a></li>
+                                  <li><a href="http://www.openexplorer.com" target="_blank">Explore!</a></li>
+                                  <li><a href="https://github.com/OpenROV/openrov-software#how-to-contribute" target="_blank">Become an OpenROV developer!</a></li>
+                                </ul>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="row" style="display: none">
+                      <div class="col-md-7 col-md-offset-2">
+
+                        <div class="panel panel-success element-short-top element-normal-bottom os-animation animated fadeInUp" data-os-animation="fadeInUp" data-os-animation-delay="0.2s" style="-webkit-animation: 0.2s;">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">
+                              Latest Community News
+                            </h3>
+                          </div>
+                          <div class="panel-body swatch-white">
+                            <div class=" element-no-top element-no-bottom" data-os-animation="none" data-os-animation-delay="0s">
+                              <div id="rss-styled" class="well" style="display:none;"></div>                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row" > <!-- next -->
+                      <div class="col-md-12 text-center" style="height: 60px">
+                        <a href="#four" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s" style="bottom: 0">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </section>
+                <section id="four" class="section swatch-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row " data-os-animation="" data-os-animation-delay="">
+                                    <div class="col-md-4 ">
+                                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".2s">
+                                          <a href="http://store.openrov.com/collections/openrov/products/openrov-v2-8-kit" target="_blank">
+                                            <div class="box box-round box-big element-normal-top element-short-bottom os-animation">
+                                                <div class="box-dummy"></div>
+                                                <div class="box-inner grid-overlay-0" style="background-color:#e9e9e9;">
+                                                  <img class="" src="assets/openrov/images/kit.jpg" alt="the kit" />
+                                                </div>
+                                            </div>
+                                            <h3 class="normal bold bordered bordered-small ">
+                                              The OpenROV Kit
+                                            </h3>
+                                            <p class="">
+                                             Everything you need <br>to build your own ROV!
+                                            </p>
+                                          </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                      <a href="http://openrov.dozuki.com/c/Operation" target="_blank">
+                                        <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".4s">
+                                            <div class="box box-round box-big element-normal-top element-short-bottom os-animation">
+                                                <div class="box-dummy"></div>
+                                                <div class="box-inner grid-overlay-0" style="background-color:#e9e9e9;">
+                                                    <img class="" src="assets/openrov/images/explore.jpg" alt="assembled" />
+                                                </div>
+                                            </div>
+                                            <h3 class="normal bold bordered bordered-small ">
+                                              Guides
+                                            </h3>
+                                            <p class="">
+                                              &dash; Drive your ROV<br>
+                                              &dash; Pre-dive checklist<br>
+
+                                            </p>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <a href="http://www.openexplorer.com" target="_blank">
+                                          <div class="element-medium-top element-medium-bottom text-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".6s">
+                                              <div class="box box-round box-big element-normal-top element-short-bottom os-animation">
+                                                  <div class="box-dummy"></div>
+                                                  <div class="box-inner grid-overlay-0" style="background-color:#e9e9e9;">
+                                                      <img class="" src="assets/openrov/images/map.jpg" alt="explore" />
+                                                  </div>
+                                              </div>
+                                              <h3 class="normal bold bordered bordered-small ">
+                                                Explore
+                                              </h3>
+                                              <p class="">See what OpenROVers are<br> discovering around the world.</p>
+                                          </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                      <div class="row element-normal-top" > <!-- next -->
+                        <div class="col-md-12 text-center" style="height: 60px color:black">
+                          <a href="#five" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s" style="bottom: 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                              <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                </section> <!-- buy - build - explore -->
+
+                <section id="five" class="section swatch-black section-text-shadow section-inner-shadow section-fullheight">
+
+                  <div class="background-media" data-start="background-position:" data-70-top-bottom="background-position:">
+                    <video poster="https://s3.amazonaws.com/openrov-com-assets/videos/tahoe.jpg" style="width: auto; height: 100%;" class="section-background-video">
+                      <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tahoe.mp4" media="screen and (min-device-width:801px)">
+                      <source type="video/mp4" src="https://s3.amazonaws.com/openrov-com-assets/videos/tahoe_mob.mp4" media="screen and (max-device-width:800px)">
+                    </video>
+
+                    <div class="row element-no-top" > <!-- next -->
+                      <div class="col-md-12 text-center" style="height: 60px color:black">
+                        <a href="#six" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s" style="bottom: 0">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                </section>  <!-- video -->
+                <section id="six" class="section swatch-gray">
+                    <div class="container">
+                        <div class="row element-short-bottom">
+                            <div class="col-md-6">
+                                <ul class="features-list element-tall-top element-no-bottom features-dark" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
+                                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                        <div class="features-list-icon">
+                                          &nbsp;<i class="fa fa-forward ninety-deg" style="color: #ffffff"></i>
+                                        </div>
+                                        <h3>100 m/328 feet</h3>
+                                        <p>
+                                            OpenROV is capable to reach 100 meter/328 feet of seawater. More than double the depth of recreational SCUBA divers.
+                                        </p>
+                                    </li>
+                                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                        <div class="features-list-icon">
+                                            &nbsp;<i class="fa fa-sun-o" style="color: #ffffff"></i>
+                                        </div>
+                                        <h3>OpenSource/OpenHardware</h3>
+                                        <p>
+                                            The source code as well as the hardware design are open and extensible.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="features-list element-tall-top element-no-bottom features-dark" data-linecolor="" data-os-animation="none" data-os-animation-delay="0s">
+                                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                        <div class="features-list-icon">
+                                            &nbsp;<i class="fa fa-flash" style="color: #ffffff"></i>
+                                        </div>
+                                        <h3>2 hours battery life</h3>
+                                        <p>
+                                            When driving the ROV on a moderate power setting, you get 2 hours or more battery setting.
+                                        </p>
+                                    </li>
+                                    <li class="element-no-top element-short-bottom os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">
+                                        <div class="features-list-icon">
+                                          &nbsp;<i class="fa fa-gamepad" style="color: #ffffff"></i>
+                                        </div>
+                                        <h3>Gamepad control</h3>
+                                        <p>
+                                            You can drive the ROV with a gamepad. Exploration hasn't been easier!
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                      <div class="row element-normal-top" > <!-- next -->
+                        <div class="col-md-12 text-center" style="height: 60px color:black">
+                          <a href="#seven" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s" style="bottom: 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                              <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                </section>
+
+                <section id="seven" class="section swatch-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="list-container row  element-normal-top element-normal-bottom">
+                                    <div class="col-md-4 element-short-bottom element-short-top os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                        <blockquote class="blockquote-list">
+                                            <div class="box box-small box-round">
+                                                <div class="box-dummy"></div>
+                                                <div class="box-inner " style="background-color:;">
+                                                    <img class="" src="assets/openrov/images/nytimes.jpg" alt="The New York Times" />
+                                                </div>
+                                            </div>
+                                            <p>&quot;It could change the future of ocean exploration.&quot;</p>
+                                            <footer>
+                                                <a href="http://bits.blogs.nytimes.com/2012/05/28/a-mini-sub-made-from-cheap-parts-could-change-underwater-exploration/" target="_blank">The New York Times</a>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-md-4 element-short-bottom element-short-top os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                        <blockquote class="blockquote-list">
+                                            <div class="box box-small box-round">
+                                                <div class="box-dummy"></div>
+                                                <div class="box-inner " style="background-color:;">
+                                                    <img class="" src="assets/openrov/images/earle.jpg" alt="Dr. Sylvia Earle, National Geographic Explorer-in-residence" />
+                                                </div>
+                                            </div>
+                                            <p>&quot;I wish they were in every hardware store in the world.&quot;</p>
+                                            <footer>
+                                              Dr. Sylvia Earle, National Geographic Explorer-in-residence
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-md-4 element-short-bottom element-short-top os-animation text-left" data-os-animation="fadeIn" data-os-animation-delay="0s">
+                                        <blockquote class="blockquote-list">
+                                            <div class="box box-small box-round">
+                                                <div class="box-dummy"></div>
+                                                <div class="box-inner " style="background-color:;">
+                                                    <img class="" src="assets/openrov/images/timoreilly.jpeg" alt="Tim O'Reilly" />
+                                                </div>
+                                            </div>
+                                            <p>&quot;The maker movement at its best.&quot;</p>
+                                            <footer>
+                                              Tim O'Reilly, Founder and CEO of O'Reilly Media, Inc
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="row element-no-top" > <!-- next -->
+                        <div class="col-md-12 text-center" style="height: 60px color:black">
+                          <a href="#eight" class="scroll-to scroll-to-id  element-short-top element-short-bottom place-bottom" data-os-animation="none" data-os-animation-delay="0s" style="bottom: 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                              <path fill="none" d="M65.473 42.382l-14.532 15.235-14.531-15.235"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                </section>
+                <section id="eight" class="section swatch-black section-inner-shadow section-text-shadow">
+                  <div class="background-media" style="background-image: url('assets/openrov/images/rov1.jpg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: 50%;" data-start="background-position:50% 0px"
+                       data-70-top-bottom="background-position:50% -120px">
+                  </div>
+                  <div class="background-overlay grid-overlay-0 " style="background-color: rgba(0,0,0,0.4);"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <header class="text-center  element-tall-top element-tall-bottom condensed os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0s">
+                                    <h1 class="big light no-bordered-header bordered-normal">
+                    Let's build a future where everyone has access to the tools for adventure.<br><br>
+                                      What will you <strong><a href="http://www.openexplorer.com" target="_blank">explore</a></strong>?
+                </h1>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="bullet-nav">
+                    <ul></ul>
+                </div>
+            </article>
+        </div>
+<footer id="footer" role="contentinfo">
+  <section class="section swatch-black">
+    <div class="container">
+      <div class="row element-normal-top element-short-bottom">
+        <div class="col-md-3 link-partners">
+          <h3 class="sidebar-header">Find us here:</h3>
+          <a href="http://www.openexplorer.com"  class="btn btn-link btn-md  btn-icon-right btn-block  element-no-top element-no-bottom" target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+            OpenExplorer<span ><div class="oe" data-animation="none"></div></span></a>
+            <a href="https://twitter.com/OpenROV"  class="btn btn-link btn-md  btn-icon-right btn-block  element-no-top element-no-bottom" target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+              Twitter<span><i class="fa fa-twitter" data-animation="none" ></i></span></a>
+              <a href="https://www.facebook.com/OpenROV"  class="btn btn-link btn-md  btn-icon-right btn-block element-no-top element-no-bottom" target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+                Facebook<span><i class="fa fa-facebook" data-animation="none"></i></span></a>
+                <a href="https://plus.google.com/117843373009218782805"  class="btn btn-link btn-md btn-block btn-icon-right  element-no-top element-no-bottom" target="_blank" data-os-animation="none" data-os-animation-delay="0s ">
+                  Google+<span><i class="fa fa-google-plus-square" data-animation="none" ></i></span></a>
+                </div>
+                <div class="col-md-3">
+                  <h3 class="sidebar-header">Community:</h3>
+                  <ul>
+                    <li><a href="https://github.com/OpenROV/openrov-software#how-to-contribute">Developers</a></li>
+                    <li><a href="https://forum.openrov.com">Forums</a></li>
+                    <li><a href="https://forum.openrov.com/c/blog">Blog</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <h3 class="sidebar-header">Documentation:</h3>
+                  <ul>
+                    <li><a href="http://openrov.dozuki.com/c/Building_from_a_kit">Build instructions</a></li>
+                    <li><a href="http://openrov.dozuki.com/c/Operation">Operation Guides</a></li>
+                    <li><a href="http://openrov.dozuki.com/c/Upgrading_ROV_Components">Hardware upgrades</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <h3 class="sidebar-header">Help:</h3>
+                  <ul>
+                    <li><a href="/tos.html">Terms of Service</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/about.html">About us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row element-no-top element-short-bottom">
+                <div class="col-md-2 pull-right">
+                  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </footer>
+        <script src="/assets/js/packages.min.js"></script>
+        <script src="/assets/js/theme.min.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-18444815-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+<script>
+$.getScript( "https://sdepold.github.io/jquery-rss/src/jquery.rss.js", function( data, textStatus, jqxhr ) {
+  $("#rss-styled").rss("https://forum.openrov.com/c/blog.rss", {
+    limit: 5,
+    ssl: true,
+    layoutTemplate: '<div>{entries}</div>',
+    entryTemplate: '<p><h3><a href="{url}">{title}</a></h3>{shortBody}</p>'
+  }).show();
+});
+</script>
+    </body>
+</html>
